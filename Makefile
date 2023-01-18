@@ -1,17 +1,11 @@
-HEADERS = kbfunc.h
-
 all: kb kbfunc
 
+random: random.o
+	gcc -o random random.o
+
 kb.o: kb.c
-	gcc -c kb.c -o kb.o
-
-kbfunc.o: kbfunc.c
-	gcc -c kbfunc.c -o kbfunc.o
-
-kb: kb.o kbfunc.o
-	gcc kb.o kbfunc.o -o kb
+	gcc -c random.o random.c
 
 clean: 
-	-rm -f kb.o	
-	-rm -f kbfunc.o
-	-rm -f kb
+	-rm -f random.o	
+	-rm -f random

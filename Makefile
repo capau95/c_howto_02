@@ -1,4 +1,4 @@
-all: kb kbfunc
+all: random
 
 random: random.o
 	gcc -o random random.o
